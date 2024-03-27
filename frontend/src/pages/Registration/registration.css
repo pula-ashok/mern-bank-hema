@@ -1,0 +1,43 @@
+.signup-container {
+  display: flex;
+}
+.image-signup-container {
+  background-image: url("../../images/Register.jpg");
+  background-size: 100% 100%;
+  width: 130vh;
+  height: 90vh;
+}
+.signup-text input {
+  border: 1px solid rgb(131, 140, 239);
+  padding: 1vw 1vw;
+  border-radius: 10px;
+  width: 300px;
+  display: flex;
+  margin: 5px;
+  margin-left: 40px;
+}
+.signup-text button {
+  border: 1px solid rgb(131, 140, 239);
+  padding: 0.8vw 1vw;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 5px;
+  margin-left: 40px;
+}
+.signup-text label {
+  margin-left: 40px;
+}
+.signup-text button:hover {
+  background-color: #a4a4db;
+}
+.signup-text img {
+  height: 60px;
+  padding: 20px;
+}
+.signup-text {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
