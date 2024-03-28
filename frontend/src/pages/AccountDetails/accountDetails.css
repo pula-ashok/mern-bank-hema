@@ -1,0 +1,29 @@
+.accountdetails-container {
+  display: flex;
+}
+.accountDetials-image-container {
+  background-image: url("../../images/Register.jpg");
+  background-size: 100% 100%;
+  width: 130vh;
+  height: 87vh;
+}
+
+.accountDetails-text-container p {
+  margin-left: 40px;
+}
+.accountDetails-text-container h2 {
+  margin-left: 40px;
+  color: #333366;
+}
+
+.accountDetails-text-container img {
+  height: 60px;
+  padding: 20px;
+}
+.accountDetails-text-container {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}

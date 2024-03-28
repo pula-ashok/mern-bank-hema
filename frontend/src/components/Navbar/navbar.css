@@ -16,3 +16,8 @@ ul {
   text-decoration: underline;
   cursor: pointer;
 }
+li button {
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}

@@ -20,7 +20,7 @@ const customerLogin = async (req, res) => {
     if (customer.password !== password) {
       return res.status(401).json({ message: "invalid password" });
     }
-    return res.status(200).json({ message: "login successfull" });
+    return res.status(200).json({ message: "login successfull", customer });
   } catch (error) {
     console.log(error);
     return res.status(500).json({ message: "Internal server error" });

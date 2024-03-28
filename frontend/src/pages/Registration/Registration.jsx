@@ -10,7 +10,7 @@ const Registration = () => {
     password: "",
     accountNumber: "",
     branch: "",
-    phonenumber: "",
+    phoneNumber: "",
   });
   const navigate = useNavigate();
   const handleClear = () => {
@@ -19,7 +19,7 @@ const Registration = () => {
       password: "",
       accountNumber: "",
       branch: "",
-      phonenumber: "",
+      phoneNumber: "",
     });
   };
   const handleSignUp = async (e) => {
@@ -108,10 +108,10 @@ const Registration = () => {
               type="number"
               name=""
               id="phonenumber"
-              value={signupData.phonenumber}
+              value={signupData.phoneNumber}
               onChange={(e) => {
                 if (e.target.value.length <= 10) {
-                  setSignupData({ ...signupData, phonenumber: e.target.value });
+                  setSignupData({ ...signupData, phoneNumber: e.target.value });
                 }
               }}
               required

@@ -6,7 +6,8 @@ const UserSchema = new mongoose.Schema(
     password: String,
     accountNumber: Number,
     branch: String,
-    phonenumber: Number,
+    phoneNumber: Number,
+    balance: { type: Number, default: 0 },
   },
   { timestamps: true }
 );

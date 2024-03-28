@@ -4,7 +4,7 @@ import logoImage from "../../images/Logo.png";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const Login = () => {
+const Login = ({ updateCustomer }) => {
   const [loginData, setLoginData] = useState({ username: "", password: "" });
   const [loginError, setLoginError] = useState("");
   const navigate = useNavigate();
@@ -22,10 +22,14 @@ const Login = () => {
         "http://localhost:3001/api/customer/login",
         loginData
       );
-      console.log(response);
+      // console.log(response);
       if (response) {
+        updateCustomer(response.data.customer);
         setLoginError("");
-        navigate("/account-details");
+        console.log(response.data.customer);
+        navigate("/account-details", {
+          state: { customer: response.data.customer },
+        });
       }
     } catch (error) {
       console.log(error);
