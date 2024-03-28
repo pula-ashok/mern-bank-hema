@@ -1,0 +1,47 @@
+.deposit-container {
+  display: flex;
+}
+.deposit-image-container {
+  background-image: url("../../images/Deposit.jpg");
+  background-size: 100% 100%;
+  width: 130vh;
+  height: 87vh;
+}
+.deposit-text-container input {
+  border: 1px solid rgb(131, 140, 239);
+  padding: 1vw 1vw;
+  border-radius: 10px;
+  width: 300px;
+  display: flex;
+  margin: 5px;
+  margin-left: 40px;
+}
+.deposit-text-container button {
+  border: 1px solid rgb(131, 140, 239);
+  padding: 0.8vw 1vw;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 5px;
+  margin-left: 40px;
+}
+.deposit-text-container label {
+  margin-left: 40px;
+}
+.deposit-text-container button:hover {
+  background-color: #a4a4db;
+}
+.deposit-text-containerimg {
+  height: 60px;
+  padding: 20px;
+}
+.deposit-text-container {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.deposit-text-container h2,
+p {
+  margin-left: 40px;
+}

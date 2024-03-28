@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./accountDetails.css";
 import logoImage from "../../images/Logo.png";
 import { useLocation, useNavigate } from "react-router-dom";
-const AccountDetails = ({ customer }) => {
+const AccountDetails = ({ customer, balance }) => {
   const location = useLocation();
   const navigate = useNavigate();
   useEffect(() => {
@@ -22,7 +22,7 @@ const AccountDetails = ({ customer }) => {
         <p>Account Number: {customer.accountNumber}</p>
         <p>Branch: {customer.branch}</p>
         <p>Phone Number: {customer.phoneNumber}</p>
-        <p>Available Balance: {customer.balance}</p>
+        <p>Available Balance: {balance > 0 ? balance : customer.balance}</p>
       </div>
     </div>
   );
