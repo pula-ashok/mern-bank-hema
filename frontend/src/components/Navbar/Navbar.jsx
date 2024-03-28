@@ -1,8 +1,13 @@
 import React from "react";
 import "./navbar.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-const Navbar = ({ customer }) => {
+const Navbar = ({ customer, setCustomer }) => {
+  const navigate = useNavigate();
+  const logoutHandler = () => {
+    setCustomer("");
+    navigate("/login");
+  };
   return (
     <nav>
       <ul>
@@ -40,7 +45,7 @@ const Navbar = ({ customer }) => {
               </Link>
             </li>
             <li>
-              <button>Logout</button>
+              <button onClick={logoutHandler}>Logout</button>
             </li>
           </>
         )}

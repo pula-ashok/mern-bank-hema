@@ -11,7 +11,6 @@ const AccountDetails = ({ customer, balance }) => {
     }
   }, []);
 
-  console.log(customer);
   return (
     <div className="accountdetails-container">
       <div className="accountDetials-image-container"></div>
@@ -22,7 +21,12 @@ const AccountDetails = ({ customer, balance }) => {
         <p>Account Number: {customer.accountNumber}</p>
         <p>Branch: {customer.branch}</p>
         <p>Phone Number: {customer.phoneNumber}</p>
-        <p>Available Balance: {balance > 0 ? balance : customer.balance}</p>
+        <p>
+          Available Balance: &nbsp;
+          <span style={{ color: "green", fontSize: "24px", fontWeight: "600" }}>
+            {balance > 0 ? balance : customer.balance}
+          </span>
+        </p>
       </div>
     </div>
   );

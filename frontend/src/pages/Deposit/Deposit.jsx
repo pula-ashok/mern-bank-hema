@@ -21,7 +21,6 @@ const Deposit = ({ customer, updateBalance }) => {
   });
   const handleDeposit = async (e) => {
     e.preventDefault();
-    console.log(depositData);
     try {
       const response = await axios.post(
         "http://localhost:3001/api/customer/deposit",
@@ -29,8 +28,6 @@ const Deposit = ({ customer, updateBalance }) => {
       );
 
       if (response) {
-        console.log(response);
-
         Swal({
           title: "Deposit successful",
           text: "Amount deposited :" + depositData.depositAmount,
@@ -43,7 +40,6 @@ const Deposit = ({ customer, updateBalance }) => {
     }
   };
   const handleClear = () => {
-    console.log("first");
     setDepositData({
       ...depositData,
       date: "",
@@ -69,6 +65,8 @@ const Deposit = ({ customer, updateBalance }) => {
             onChange={(e) =>
               setDepositData({ ...depositData, date: e.target.value })
             }
+            required
+            placeholder="Deposit Date"
           />
           <label htmlFor="">Deposit Amount:</label>
           <input
@@ -79,6 +77,8 @@ const Deposit = ({ customer, updateBalance }) => {
             onChange={(e) =>
               setDepositData({ ...depositData, depositAmount: e.target.value })
             }
+            required
+            placeholder="Deposit Amount"
           />
           <label htmlFor="">Deposit Type:</label>
           <input
@@ -87,6 +87,8 @@ const Deposit = ({ customer, updateBalance }) => {
             onChange={(e) =>
               setDepositData({ ...depositData, depositType: e.target.value })
             }
+            required
+            placeholder="Deposit Type"
           />
           <button type="submit">Deposit</button>
           <button type="submit" onClick={handleClear}>

@@ -22,17 +22,14 @@ const Login = ({ updateCustomer }) => {
         "http://localhost:3001/api/customer/login",
         loginData
       );
-      // console.log(response);
       if (response) {
         updateCustomer(response.data.customer);
         setLoginError("");
-        console.log(response.data.customer);
         navigate("/account-details", {
           state: { customer: response.data.customer },
         });
       }
     } catch (error) {
-      console.log(error);
       setLoginError("Inavlid username or password,please try again");
     }
   };
@@ -53,6 +50,7 @@ const Login = ({ updateCustomer }) => {
                 setLoginData({ ...loginData, username: e.target.value })
               }
               required
+              placeholder="Username"
             />
           </div>
           <div>
@@ -67,6 +65,7 @@ const Login = ({ updateCustomer }) => {
               }
               maxLength={8}
               required
+              placeholder="Password"
             />
           </div>
 

@@ -24,13 +24,11 @@ const Registration = () => {
   };
   const handleSignUp = async (e) => {
     e.preventDefault();
-    console.log(signupData);
     try {
       const response = await axios.post(
         "http://localhost:3001/api/customer/signup",
         signupData
       );
-      console.log(response);
       if (response) {
         navigate("/login");
       }
@@ -55,6 +53,7 @@ const Registration = () => {
                 setSignupData({ ...signupData, username: e.target.value })
               }
               required
+              placeholder="Username"
             />
           </div>
           <div>
@@ -69,6 +68,7 @@ const Registration = () => {
               }
               maxLength={8}
               required
+              placeholder="Password"
             />
           </div>
           <div>
@@ -87,6 +87,7 @@ const Registration = () => {
                 }
               }}
               required
+              placeholder="Account Number"
             />
           </div>
           <div>
@@ -100,6 +101,7 @@ const Registration = () => {
                 setSignupData({ ...signupData, branch: e.target.value })
               }
               required
+              placeholder="Branch"
             />
           </div>
           <div>
@@ -115,6 +117,7 @@ const Registration = () => {
                 }
               }}
               required
+              placeholder="Required Phone Number"
             />
           </div>
           <div>
