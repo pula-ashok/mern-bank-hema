@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./registration.css";
 import axios from "axios";
 import logoImage from "../../images/Logo.png";
+import { useNavigate } from "react-router-dom";
 
 const Registration = () => {
   const [signupData, setSignupData] = useState({
@@ -11,6 +12,7 @@ const Registration = () => {
     branch: "",
     phonenumber: "",
   });
+  const navigate = useNavigate();
   const handleClear = () => {
     setSignupData({
       username: "",
@@ -29,6 +31,9 @@ const Registration = () => {
         signupData
       );
       console.log(response);
+      if (response) {
+        navigate("/login");
+      }
     } catch (error) {
       console.log(error);
     }
